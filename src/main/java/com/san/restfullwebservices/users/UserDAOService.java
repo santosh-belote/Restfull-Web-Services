@@ -7,6 +7,7 @@ package com.san.restfullwebservices.users;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -48,6 +49,16 @@ public class UserDAOService {
 
         }
         return null;
+    }
+    public void DeleteUser(int id) {
+        Iterator itr = users.iterator();
+        while (itr.hasNext()) {
+            User user = (User) itr.next();
+            if (user.getId() == id) {
+                itr.remove();
+            }
+
+        }
     }
 
 }
