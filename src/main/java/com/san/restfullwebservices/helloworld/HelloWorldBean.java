@@ -7,7 +7,7 @@ package com.san.restfullwebservices.helloworld;
 
 /**
  *
- * @author krawler
+ * @author Santosh Belote
  */
 class HelloWorldBean {
 

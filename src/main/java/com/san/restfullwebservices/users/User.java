@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author krawler
+ * @author Santosh Belote
  */
 public class User {
     
@@ -17,6 +17,9 @@ public class User {
     private String name;
     private Date dob;
 
+    protected User(){
+        
+    }
     public User(Integer id, String name, Date dob) {
         this.id = id;
         this.name = name;
