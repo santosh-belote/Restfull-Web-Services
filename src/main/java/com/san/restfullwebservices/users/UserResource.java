@@ -8,6 +8,7 @@ package com.san.restfullwebservices.users;
 import com.san.restfullwebservices.exception.UserNotFoundException;
 import java.net.URI;
 import java.util.List;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -49,7 +50,7 @@ public class UserResource {
     }
 
     @PostMapping(path = "/users")
-    public ResponseEntity<Object> addUser(@RequestBody User user) {
+    public ResponseEntity<Object> addUser(@Valid @RequestBody User user) {
         User savedUser = service.addUser(user);
         //
         URI location = ServletUriComponentsBuilder
