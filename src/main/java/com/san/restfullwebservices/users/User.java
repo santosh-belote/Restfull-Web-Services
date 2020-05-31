@@ -5,6 +5,8 @@
  */
 package com.san.restfullwebservices.users;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
@@ -13,14 +15,17 @@ import javax.validation.constraints.Size;
  *
  * @author Santosh Belote
  */
+@ApiModel(description = "Description about user.")
 public class User {
     
     private Integer id;
     
     @Size(min = 2)
+    @ApiModelProperty(notes = "Name should have atleast 2 characters.")
     private String name;
     
     @Past // Entered date should be Past date
+    @ApiModelProperty(notes = "Birth date should be in past.")
     private Date dob;
 
     protected User(){
